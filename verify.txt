@@ -1,0 +1,1627 @@
+# FINAL MASTER IMPLEMENTATION, QUALITY ASSURANCE AND PRODUCTION ACCEPTANCE PROMPT
+# COMPLETE PHARMACY MANAGEMENT SYSTEM
+
+## PROJECT: PHARMACY MANAGEMENT SYSTEM
+## OBJECTIVE: COMPLETE FEATURE IMPLEMENTATION, SYSTEM INTEGRATION, QUALITY ASSURANCE AND PRODUCTION READINESS
+
+---
+
+# 1. YOUR ROLE AND RESPONSIBILITY
+
+Act as a complete senior software engineering, architecture, pharmacy operations, security, testing and deployment team.
+
+You are responsible for ensuring that the existing Pharmacy Management System is fully implemented, professionally designed, functionally complete, properly integrated, secure, reliable, maintainable and prepared for actual commercial pharmacy operations.
+
+Work as:
+
+- Senior Software Architect.
+- Senior React 18 Developer.
+- Senior UI/UX Designer.
+- Senior Node.js and Express Developer.
+- Database Architect.
+- Pharmacy Operations Specialist.
+- POS and Financial Systems Specialist.
+- Inventory Management Specialist.
+- Cybersecurity Engineer.
+- QA Automation Engineer.
+- Performance Engineer.
+- DevOps and Production Deployment Engineer.
+
+Your job is not simply to review the project, generate a dashboard, create pages or provide recommendations.
+
+You must inspect the actual existing source code, identify missing and broken functionality, implement all necessary corrections, integrate all modules, execute real tests and provide evidence of completion.
+
+**The final product must be a fully operational pharmacy management platform, not a visual prototype or partially implemented demonstration system.**
+
+## Mandatory operating principles
+
+1. Preserve working functionality.
+2. Inspect existing source files before modifying them.
+3. Use the existing business logic wherever it is correct.
+4. Repair root causes rather than hiding errors.
+5. Implement actual functionality behind every relevant control.
+6. Connect every module to the backend and database.
+7. Enforce permissions on the server, not just the frontend.
+8. Protect financial and inventory records.
+9. Execute real tests using controlled test data.
+10. Document every unresolved issue.
+11. Never claim that an untested feature is complete.
+12. Do not declare production readiness while critical defects remain.
+
+---
+
+# 2. MANDATORY TECHNOLOGY STACK
+
+Maintain the following approved implementation stack.
+
+### Frontend
+
+- React 18.
+- TypeScript.
+- Tailwind CSS.
+- Vite.
+- React Router.
+- TanStack Query.
+- TanStack Table.
+- React Hook Form.
+- Zod.
+- Lucide React.
+- Recharts.
+- Radix UI primitives where appropriate.
+- Sonner or an equivalent toast notification library.
+
+### Backend
+
+- Node.js.
+- Express.js.
+- TypeScript.
+- RESTful API.
+- Knex.js.
+- mysql2.
+- Zod validation.
+- Secure session management.
+- Structured logging.
+
+### Initial database
+
+- XAMPP.
+- MySQL or MariaDB.
+- phpMyAdmin for administration.
+- mysql2 Node.js database driver.
+
+### Future database
+
+- PostgreSQL.
+- pg database driver.
+- Database-independent business logic.
+- Compatible migration architecture.
+
+### Testing
+
+- Vitest.
+- React Testing Library.
+- Supertest.
+- Playwright.
+- Database integration tests.
+- Automated POS end-to-end tests.
+
+Do not migrate to React 19.
+
+Do not use PHP MySQLi directly in the Node.js backend. MySQLi is a PHP extension; use mysql2 for Node.js connectivity.
+
+Use Knex migrations and a centralised data-access architecture to support both MySQL/MariaDB and PostgreSQL.
+
+Inspect existing dependency versions before adding or upgrading packages.
+
+Do not introduce unnecessary dependencies or duplicate libraries.
+
+---
+
+# 3. FINAL PROJECT AUDIT CHECKLIST
+
+Before implementation, inspect the entire existing project.
+
+### Source code and architecture
+
+- [ ] Inspect the complete project directory.
+- [ ] Identify all frontend entry points.
+- [ ] Identify all backend entry points.
+- [ ] Inspect the existing routing structure.
+- [ ] Inspect all reusable components.
+- [ ] Inspect the existing API architecture.
+- [ ] Inspect controllers and services.
+- [ ] Inspect repositories and database access.
+- [ ] Inspect all installed dependencies.
+- [ ] Inspect package and lock files.
+- [ ] Inspect environment variables.
+- [ ] Inspect all existing configuration files.
+- [ ] Inspect database migrations.
+- [ ] Inspect SQL schema.
+- [ ] Inspect relationships and indexes.
+- [ ] Inspect authentication.
+- [ ] Inspect session handling.
+- [ ] Inspect permission enforcement.
+- [ ] Inspect POS functionality.
+- [ ] Inspect inventory management.
+- [ ] Inspect reports.
+- [ ] Inspect existing test coverage.
+- [ ] Inspect existing deployment instructions.
+
+### Defect identification
+
+- [ ] Resolve compilation errors.
+- [ ] Resolve broken imports.
+- [ ] Resolve missing dependencies.
+- [ ] Resolve API integration failures.
+- [ ] Resolve database errors.
+- [ ] Resolve incorrect queries.
+- [ ] Resolve validation errors.
+- [ ] Resolve broken CRUD operations.
+- [ ] Resolve incorrect financial calculations.
+- [ ] Resolve inventory inconsistencies.
+- [ ] Resolve authentication weaknesses.
+- [ ] Resolve authorisation weaknesses.
+- [ ] Resolve performance bottlenecks.
+- [ ] Resolve inaccessible or broken UI components.
+- [ ] Resolve duplicate implementations.
+- [ ] Resolve incomplete business workflows.
+
+Create and maintain:
+
+- PROJECT_AUDIT.md
+- ISSUE_REGISTER.md
+- FEATURE_TRACEABILITY_MATRIX.md
+- SYSTEM_ARCHITECTURE.md
+- IMPLEMENTATION_STATUS.md
+
+Every discovered problem must have a severity, root cause, assigned resolution and verification status.
+
+---
+
+# 4. GLOBAL UI/UX AND DESIGN ACCEPTANCE
+
+The entire application must follow the supplied professional pharmacy dashboard reference image.
+
+The design direction must remain consistent across every module.
+
+### Visual design
+
+- [ ] Professional modern-classic interface.
+- [ ] Deep navy sidebar.
+- [ ] White and light-grey content surfaces.
+- [ ] Blue primary actions.
+- [ ] Emerald success indicators.
+- [ ] Purple and orange supporting accents.
+- [ ] Consistent typography.
+- [ ] Consistent spacing system.
+- [ ] Reusable Tailwind design tokens.
+- [ ] Consistent border radius.
+- [ ] Subtle shadows.
+- [ ] Professional tables.
+- [ ] Clear visual hierarchy.
+- [ ] Consistent iconography.
+- [ ] Accessible contrast.
+- [ ] Responsive components.
+- [ ] Consistent status indicators.
+
+Do not redesign every module independently.
+
+Use one shared design system throughout the application.
+
+### Global application shell
+
+- [ ] Pharmacy logo and branding.
+- [ ] Collapsible navigation sidebar.
+- [ ] Active navigation states.
+- [ ] Tooltips.
+- [ ] Responsive mobile navigation.
+- [ ] Top navigation.
+- [ ] Global search.
+- [ ] Notification centre.
+- [ ] User profile.
+- [ ] Role information.
+- [ ] Logout.
+- [ ] Branch selector where applicable.
+- [ ] Operational status.
+- [ ] Consistent breadcrumbs.
+- [ ] Reusable page headers.
+
+### Shared UI components
+
+- [ ] Dashboard cards.
+- [ ] Statistics cards.
+- [ ] Data tables.
+- [ ] Search components.
+- [ ] Filter components.
+- [ ] Date-range pickers.
+- [ ] Pagination.
+- [ ] Tabs.
+- [ ] Dropdowns.
+- [ ] Accessible modals.
+- [ ] Confirmation dialogs.
+- [ ] Drawers.
+- [ ] Form controls.
+- [ ] Status badges.
+- [ ] Tooltips.
+- [ ] Toast notifications.
+- [ ] Loading indicators.
+- [ ] Skeleton loaders.
+- [ ] Empty states.
+- [ ] Error states.
+- [ ] Charts.
+- [ ] Currency formatting.
+- [ ] Date formatting.
+- [ ] Permission-aware actions.
+
+### User experience
+
+- [ ] No dead buttons.
+- [ ] No decorative controls presented as functional.
+- [ ] No broken navigation links.
+- [ ] No placeholder pages presented as completed modules.
+- [ ] No inaccessible forms.
+- [ ] No confusing error messages.
+- [ ] No accidental form resubmissions.
+- [ ] No unnecessary navigation for routine cashier operations.
+- [ ] No inconsistent modal behaviour.
+- [ ] No horizontal overflow on supported screen sizes.
+- [ ] No browser alert/confirm popups for application workflows.
+
+---
+
+# 5. AUTHENTICATION AND USER MANAGEMENT
+
+### Authentication
+
+- [ ] Working login.
+- [ ] Secure logout.
+- [ ] Session persistence.
+- [ ] Session expiration.
+- [ ] Password hashing.
+- [ ] Password validation.
+- [ ] Password reset.
+- [ ] Account deactivation.
+- [ ] Failed login protection.
+- [ ] Login rate limiting.
+- [ ] Protected frontend routes.
+- [ ] Protected backend routes.
+- [ ] Secure authentication cookies where applicable.
+- [ ] Session invalidation after password changes.
+- [ ] Session invalidation after user deactivation.
+
+### Role management
+
+Provide configurable roles, including:
+
+- Super Administrator.
+- Pharmacy Administrator.
+- Pharmacist.
+- Cashier.
+- Inventory Manager.
+- Procurement Officer.
+- Accountant.
+- Auditor.
+- Custom roles where required.
+
+### Permissions
+
+- [ ] Module permissions.
+- [ ] View permissions.
+- [ ] Create permissions.
+- [ ] Edit permissions.
+- [ ] Approval permissions.
+- [ ] Archive permissions.
+- [ ] Export permissions.
+- [ ] Refund permissions.
+- [ ] Price override permissions.
+- [ ] Inventory adjustment permissions.
+- [ ] User management permissions.
+- [ ] Reports permissions.
+- [ ] Prescription access permissions.
+
+Enforce permissions at the API and service layers.
+
+Never rely on hiding frontend buttons as the actual security mechanism.
+
+Test both authorised and unauthorised access.
+
+---
+
+# 6. DASHBOARD ACCEPTANCE CHECKLIST
+
+The primary dashboard must be fully connected to actual business records.
+
+### Main statistics
+
+- [ ] Today's sales.
+- [ ] Transaction count.
+- [ ] Current inventory value.
+- [ ] Active customers.
+- [ ] Total medicines.
+- [ ] Low-stock medicines.
+- [ ] Out-of-stock medicines.
+- [ ] Expiring medicines.
+- [ ] Expired stock.
+- [ ] Outstanding customer balances.
+- [ ] Outstanding supplier balances, where supported.
+- [ ] Gross profit where cost data is reliable.
+- [ ] Relevant financial performance indicators.
+
+### Charts
+
+- [ ] Daily sales chart.
+- [ ] Weekly sales chart.
+- [ ] Monthly sales chart.
+- [ ] Sales trend.
+- [ ] Transactions trend.
+- [ ] Sales by payment method.
+- [ ] Sales by category.
+- [ ] Top-selling medicines.
+- [ ] Inventory distribution.
+- [ ] Inventory alerts.
+
+### Dashboard sections
+
+- [ ] Recent transactions.
+- [ ] Recent sales.
+- [ ] Recent purchases.
+- [ ] Stock alerts.
+- [ ] Expiry alerts.
+- [ ] Recent stock movements.
+- [ ] Quick actions.
+- [ ] Recent notifications.
+
+### Dashboard behaviour
+
+- [ ] Date filtering.
+- [ ] Custom date range.
+- [ ] Branch filtering where applicable.
+- [ ] User permission filtering.
+- [ ] Actual backend data.
+- [ ] Correct currency formatting.
+- [ ] Accurate totals.
+- [ ] Efficient database queries.
+- [ ] Loading states.
+- [ ] Error states.
+- [ ] Useful empty states.
+
+All figures must reconcile against the underlying transaction records.
+
+Never use hardcoded demonstration statistics in production.
+
+---
+
+# 7. MEDICINE MANAGEMENT
+
+- [ ] Add medicine.
+- [ ] Edit medicine.
+- [ ] View medicine details.
+- [ ] Search medicine.
+- [ ] Search generic name.
+- [ ] Search brand.
+- [ ] Search barcode.
+- [ ] Search SKU.
+- [ ] Filter by category.
+- [ ] Filter by manufacturer.
+- [ ] Filter by status.
+- [ ] Pagination.
+- [ ] Sorting.
+- [ ] Archive medicine.
+- [ ] Restore medicine where permitted.
+- [ ] Manage medicine categories.
+- [ ] Manage brands.
+- [ ] Manage manufacturers.
+- [ ] Manage units of measure.
+- [ ] Store strength.
+- [ ] Store dosage form.
+- [ ] Store barcode.
+- [ ] Store purchase cost.
+- [ ] Store selling price.
+- [ ] Configure reorder level.
+- [ ] Configure minimum stock.
+- [ ] Configure prescription classification.
+- [ ] View batch history.
+- [ ] View purchase history.
+- [ ] View sales history.
+- [ ] View current stock.
+
+Prevent duplicate medicine records using appropriate identifiers and duplicate-checking rules.
+
+Do not physically delete medicines with important transaction history.
+
+---
+
+# 8. INVENTORY AND BATCH MANAGEMENT
+
+### Inventory
+
+- [ ] Inventory overview.
+- [ ] Stock receiving.
+- [ ] Stock adjustment.
+- [ ] Stock transfers where supported.
+- [ ] Stock reconciliation.
+- [ ] Stock movement history.
+- [ ] Inventory valuation.
+- [ ] Low-stock tracking.
+- [ ] Out-of-stock tracking.
+- [ ] Damaged stock.
+- [ ] Expired stock.
+- [ ] Stock write-offs.
+- [ ] Inventory export.
+- [ ] Inventory search and filtering.
+
+### Batch management
+
+- [ ] Batch registration.
+- [ ] Batch number.
+- [ ] Manufacture date where available.
+- [ ] Expiry date.
+- [ ] Supplier reference.
+- [ ] Purchase reference.
+- [ ] Received quantity.
+- [ ] Available quantity.
+- [ ] Purchase cost.
+- [ ] Batch status.
+- [ ] Batch-level stock movements.
+- [ ] Batch-level sales history.
+- [ ] Batch-level expiry alerts.
+
+### Stock integrity
+
+- [ ] Implement FEFO allocation.
+- [ ] Prevent expired batch sales.
+- [ ] Prevent quarantined stock sales.
+- [ ] Prevent unauthorised overselling.
+- [ ] Prevent negative stock unless a formally approved policy permits it.
+- [ ] Implement consistent unit conversions.
+- [ ] Record every quantity change.
+- [ ] Reconcile stock against movement records.
+- [ ] Support concurrent stock transactions safely.
+
+Use a traceable stock movement ledger.
+
+Never silently change inventory quantities.
+
+---
+
+# 9. POINT OF SALE — CRITICAL ACCEPTANCE CHECKLIST
+
+The POS must be fully operational and optimised for daily pharmacy operations.
+
+### Product lookup
+
+- [ ] Product name search.
+- [ ] Generic name search.
+- [ ] Brand search.
+- [ ] Barcode lookup.
+- [ ] SKU lookup.
+- [ ] Category filtering.
+- [ ] Product availability.
+- [ ] Batch availability.
+- [ ] Expiry validation.
+- [ ] Price display.
+- [ ] Supported sales-unit selection.
+
+### Cart
+
+- [ ] Add medicine.
+- [ ] Remove medicine.
+- [ ] Adjust quantity.
+- [ ] Validate available stock.
+- [ ] Apply authorised discounts.
+- [ ] Support approved price overrides.
+- [ ] Calculate subtotal.
+- [ ] Calculate tax.
+- [ ] Calculate discount.
+- [ ] Calculate grand total.
+- [ ] Select customer.
+- [ ] Support walk-in customers.
+- [ ] Preserve cart safely during supported interactions.
+- [ ] Prevent duplicate submissions.
+
+### Payment
+
+- [ ] Cash.
+- [ ] Mobile Money.
+- [ ] Card.
+- [ ] Bank transfer.
+- [ ] Split payments.
+- [ ] Authorised credit payments.
+- [ ] Correct payment references.
+- [ ] Correct amount received.
+- [ ] Correct outstanding balance.
+- [ ] Correct cash change.
+- [ ] Payment status.
+- [ ] Payment history.
+- [ ] Payment failure handling.
+- [ ] Duplicate payment prevention.
+- [ ] External payment verification.
+
+### Transaction completion
+
+- [ ] Create sale.
+- [ ] Create sale items.
+- [ ] Record payments.
+- [ ] Deduct inventory.
+- [ ] Allocate stock to appropriate batches.
+- [ ] Record stock movements.
+- [ ] Generate unique receipt reference.
+- [ ] Record cashier.
+- [ ] Record transaction time.
+- [ ] Support authorised cancellations.
+- [ ] Preserve full transaction history.
+
+### Critical transaction protection
+
+- [ ] Use proper database transactions.
+- [ ] Use idempotency keys.
+- [ ] Prevent duplicate sales.
+- [ ] Validate stock again on the server.
+- [ ] Recalculate prices and totals on the server.
+- [ ] Prevent concurrent overselling.
+- [ ] Roll back failed database operations.
+- [ ] Keep payment and sales records consistent.
+- [ ] Support verified asynchronous payment callbacks.
+- [ ] Prevent receipt printing from repeating a transaction.
+
+A completed sale must have a consistent sale record, sale items, payment records and appropriate inventory movements.
+
+Use payment states such as pending, confirmed, failed and refunded where applicable.
+
+Do not treat initiation of an external payment as confirmation.
+
+---
+
+# 10. RECEIPT MANAGEMENT
+
+- [ ] Professional receipt layout.
+- [ ] Pharmacy branding.
+- [ ] Receipt number.
+- [ ] Transaction date and time.
+- [ ] Cashier.
+- [ ] Customer information where applicable.
+- [ ] Medicine descriptions.
+- [ ] Quantities.
+- [ ] Unit prices.
+- [ ] Discounts.
+- [ ] Taxes.
+- [ ] Grand total.
+- [ ] Payment method.
+- [ ] Amount paid.
+- [ ] Change.
+- [ ] Outstanding balance where applicable.
+- [ ] Applicable return policy.
+- [ ] Standard printer support.
+- [ ] Thermal printer compatibility where supported.
+- [ ] Print preview.
+- [ ] Reprint authorised historical receipt.
+- [ ] Download or export receipt where appropriate.
+
+Receipt generation and printing must not alter a completed sale.
+
+---
+
+# 11. PURCHASING AND SUPPLIER MANAGEMENT
+
+### Suppliers
+
+- [ ] Supplier registration.
+- [ ] Supplier editing.
+- [ ] Supplier deactivation.
+- [ ] Supplier contact details.
+- [ ] Supplier address.
+- [ ] Supplier tax information where applicable.
+- [ ] Supplier search.
+- [ ] Supplier history.
+- [ ] Supplier balances.
+- [ ] Supplier statements.
+
+### Purchasing
+
+- [ ] Purchase order creation.
+- [ ] Purchase order editing.
+- [ ] Purchase approval.
+- [ ] Supplier selection.
+- [ ] Medicine selection.
+- [ ] Purchase quantities.
+- [ ] Purchase prices.
+- [ ] Expected delivery.
+- [ ] Partial deliveries.
+- [ ] Goods receiving.
+- [ ] Batch creation.
+- [ ] Expiry registration.
+- [ ] Supplier invoices.
+- [ ] Purchase returns.
+- [ ] Purchase payments.
+- [ ] Outstanding purchase balances.
+- [ ] Purchase history.
+
+Creating a purchase order must not automatically increase available stock.
+
+Only properly authorised goods-receiving operations should update inventory.
+
+---
+
+# 12. CUSTOMER MANAGEMENT
+
+- [ ] Customer registration.
+- [ ] Customer profile.
+- [ ] Customer editing.
+- [ ] Customer deactivation.
+- [ ] Search.
+- [ ] Customer purchase history.
+- [ ] Customer account balances.
+- [ ] Customer payment history.
+- [ ] Customer statements where supported.
+- [ ] Prescription references.
+- [ ] Customer transaction history.
+
+Protect personal and prescription-related information.
+
+Restrict sensitive data to authorised users.
+
+---
+
+# 13. PRESCRIPTION AND DISPENSING MANAGEMENT
+
+- [ ] Prescription registration.
+- [ ] Prescription reference.
+- [ ] Customer or patient association.
+- [ ] Prescriber information where required.
+- [ ] Prescribed medicine.
+- [ ] Strength.
+- [ ] Dosage instructions.
+- [ ] Prescribed quantity.
+- [ ] Prescription date.
+- [ ] Supporting attachments.
+- [ ] Verification status.
+- [ ] Pharmacist approval where required.
+- [ ] Dispensing status.
+- [ ] Dispensing history.
+- [ ] Prescription-related audit trail.
+- [ ] Restricted medicine controls.
+- [ ] Prescription validity checks where applicable.
+
+Prescription and restricted medicine rules must be configurable according to the applicable pharmacy jurisdiction.
+
+Do not permit unauthorised users to bypass required dispensing approvals.
+
+Secure prescription documents and patient information.
+
+---
+
+# 14. RETURNS, REFUNDS AND REVERSALS
+
+- [ ] Search original sale.
+- [ ] Select returned products.
+- [ ] Validate original quantities.
+- [ ] Validate return quantities.
+- [ ] Record reason.
+- [ ] Calculate authorised refund.
+- [ ] Record refund method.
+- [ ] Record approving user.
+- [ ] Update customer balance where applicable.
+- [ ] Record stock movement.
+- [ ] Determine whether returned stock can be restocked.
+- [ ] Quarantine unsuitable returns.
+- [ ] Preserve original sale.
+- [ ] Maintain reversal history.
+- [ ] Prevent duplicate refunds.
+- [ ] Support refund reports.
+
+Never delete completed financial transactions to process returns.
+
+Use traceable reversal and adjustment records.
+
+---
+
+# 15. FINANCIAL MANAGEMENT AND RECONCILIATION
+
+Implement accurate financial records for:
+
+- [ ] Sales revenue.
+- [ ] Payments received.
+- [ ] Refunds.
+- [ ] Customer credit.
+- [ ] Supplier payables.
+- [ ] Supplier payments.
+- [ ] Discounts.
+- [ ] Taxes.
+- [ ] Cost of goods sold.
+- [ ] Gross profit.
+- [ ] Expenses if the application supports expense management.
+- [ ] Net profit where complete data is available.
+- [ ] Cashier sessions.
+- [ ] Cash opening balances.
+- [ ] Cash closing balances.
+- [ ] Cash variance.
+- [ ] Daily reconciliation.
+- [ ] Payment reconciliation.
+
+Use exact monetary calculations and consistent rounding rules.
+
+Never calculate currency using unreliable floating-point arithmetic.
+
+Use a configured currency and documented tax policies.
+
+A financial report must reconcile with the actual underlying transactions.
+
+---
+
+# 16. REPORTS AND ANALYTICS
+
+### Sales reports
+
+- [ ] Daily sales.
+- [ ] Weekly sales.
+- [ ] Monthly sales.
+- [ ] Annual sales.
+- [ ] Sales by cashier.
+- [ ] Sales by customer.
+- [ ] Sales by medicine.
+- [ ] Sales by category.
+- [ ] Sales by payment method.
+- [ ] Returns and refunds.
+
+### Inventory reports
+
+- [ ] Current stock.
+- [ ] Stock valuation.
+- [ ] Stock movement.
+- [ ] Low stock.
+- [ ] Out of stock.
+- [ ] Expiring stock.
+- [ ] Expired stock.
+- [ ] Batch report.
+- [ ] Inventory adjustments.
+- [ ] Damaged stock.
+
+### Purchasing reports
+
+- [ ] Purchase orders.
+- [ ] Goods received.
+- [ ] Supplier purchases.
+- [ ] Supplier payments.
+- [ ] Outstanding payables.
+- [ ] Purchase returns.
+
+### Financial reports
+
+- [ ] Revenue.
+- [ ] Payments.
+- [ ] Refunds.
+- [ ] Discounts.
+- [ ] Taxes.
+- [ ] Cost of goods sold.
+- [ ] Gross profit.
+- [ ] Net profit where supported.
+- [ ] Receivables.
+- [ ] Payables.
+- [ ] Cash reconciliation.
+
+### Reporting functionality
+
+- [ ] Date range.
+- [ ] Custom filters.
+- [ ] Search.
+- [ ] Sorting.
+- [ ] Pagination.
+- [ ] CSV export.
+- [ ] PDF export where required.
+- [ ] Printing.
+- [ ] Permission-controlled access.
+- [ ] Accurate totals.
+- [ ] Efficient report queries.
+
+---
+
+# 17. NOTIFICATIONS AND SYSTEM ALERTS
+
+- [ ] Low-stock alerts.
+- [ ] Out-of-stock alerts.
+- [ ] Upcoming expiry alerts.
+- [ ] Expired stock alerts.
+- [ ] Purchase status notifications.
+- [ ] Pending payment alerts.
+- [ ] Payment failure alerts.
+- [ ] Unusual inventory adjustment alerts.
+- [ ] User security notifications.
+- [ ] System notifications.
+- [ ] Notification read/unread status.
+- [ ] Notification history.
+- [ ] Relevant action links.
+- [ ] Permission-aware notifications.
+
+Avoid repeated uncontrolled notifications for the same unresolved event.
+
+---
+
+# 18. SYSTEM SETTINGS AND CONFIGURATION
+
+### Pharmacy settings
+
+- [ ] Pharmacy name.
+- [ ] Pharmacy logo.
+- [ ] Address.
+- [ ] Email.
+- [ ] Telephone.
+- [ ] Branch details where supported.
+- [ ] Receipt details.
+- [ ] Return policy.
+
+### Business settings
+
+- [ ] Currency.
+- [ ] Tax configuration.
+- [ ] Discounts.
+- [ ] Payment methods.
+- [ ] Credit policies.
+- [ ] Stock thresholds.
+- [ ] Expiry warning periods.
+- [ ] Date format.
+- [ ] Time zone.
+- [ ] Number formats.
+
+### System settings
+
+- [ ] User preferences.
+- [ ] Theme where supported.
+- [ ] Notification preferences.
+- [ ] Printer settings.
+- [ ] Session policies.
+- [ ] Security policies.
+- [ ] Audit retention.
+- [ ] Database configuration.
+- [ ] Backup settings.
+
+Never hardcode settings that should be configurable.
+
+---
+
+# 19. DATABASE AND DATA INTEGRITY ACCEPTANCE
+
+### Database architecture
+
+- [ ] Centralised database connection.
+- [ ] Knex migrations.
+- [ ] Version tracking.
+- [ ] Foreign keys.
+- [ ] Primary keys.
+- [ ] Unique constraints.
+- [ ] Proper indexes.
+- [ ] Referential integrity.
+- [ ] Parameterised queries.
+- [ ] Exact monetary data types.
+- [ ] Consistent timestamps.
+- [ ] Transaction support.
+- [ ] Safe archival.
+- [ ] Audit records.
+
+### Database compatibility
+
+- [ ] MySQL/MariaDB connection works.
+- [ ] PostgreSQL adapter is prepared.
+- [ ] Database selection uses environment configuration.
+- [ ] No credentials are hardcoded.
+- [ ] Database-specific operations are isolated.
+- [ ] SQL compatibility is reviewed.
+- [ ] Migration differences are documented.
+- [ ] Data export and import procedures exist.
+- [ ] Data migration is repeatable.
+- [ ] Database migration tests exist where the engines are available.
+
+### Data integrity
+
+- [ ] No duplicate transaction references.
+- [ ] No orphaned sale items.
+- [ ] No orphaned payments.
+- [ ] No unexplained stock changes.
+- [ ] No invalid medicine batch references.
+- [ ] No broken foreign-key relationships.
+- [ ] No invalid negative quantities.
+- [ ] No inconsistent payment totals.
+- [ ] No inconsistent inventory balances.
+- [ ] No duplicate processing of external payment events.
+
+The application must protect the database from partial and inconsistent business operations.
+
+---
+
+# 20. API AND BACKEND ACCEPTANCE
+
+- [ ] All required endpoints implemented.
+- [ ] API routes documented.
+- [ ] API versioning.
+- [ ] Server-side request validation.
+- [ ] Authentication middleware.
+- [ ] Permission middleware.
+- [ ] Consistent response format.
+- [ ] Consistent error handling.
+- [ ] Correct HTTP status codes.
+- [ ] Pagination.
+- [ ] Filtering.
+- [ ] Search.
+- [ ] Sorting.
+- [ ] Rate limiting.
+- [ ] Secure CORS.
+- [ ] Request logging.
+- [ ] Health-check endpoint.
+- [ ] Database error handling.
+- [ ] Transaction management.
+- [ ] Idempotency handling.
+- [ ] API integration tests.
+
+The backend must independently validate critical business operations.
+
+Never trust sensitive amounts, permissions, stock quantities or financial totals supplied by the client.
+
+---
+
+# 21. SECURITY ACCEPTANCE CHECKLIST
+
+Perform a security assessment covering:
+
+- [ ] SQL injection.
+- [ ] Cross-site scripting.
+- [ ] Cross-site request forgery.
+- [ ] Broken access control.
+- [ ] Privilege escalation.
+- [ ] Weak authentication.
+- [ ] Session vulnerabilities.
+- [ ] Brute-force attacks.
+- [ ] Insecure file uploads.
+- [ ] Information disclosure.
+- [ ] Exposed environment variables.
+- [ ] Sensitive information in logs.
+- [ ] Insecure API endpoints.
+- [ ] Insecure backups.
+- [ ] Unauthorised record access.
+
+Implement:
+
+- Secure password hashing.
+- Secure session handling.
+- Helmet security headers.
+- Rate limiting.
+- Input validation.
+- Output escaping.
+- CSRF protection appropriate to the authentication model.
+- Strict CORS.
+- Private file storage.
+- Redacted logs.
+- Permission enforcement.
+- HTTPS in production.
+- Secure backup handling.
+
+Use a recognised application security verification checklist such as OWASP ASVS as part of the security review.
+
+Where external card payments are supported, use a compliant payment provider and avoid storing raw card details.
+
+Sensitive patient information must be accessed only by authorised personnel and handled according to applicable privacy and pharmacy regulations.
+
+---
+
+# 22. NON-FUNCTIONAL REQUIREMENTS
+
+The application must satisfy the following non-functional requirements.
+
+## Performance
+
+- [ ] Dashboard loads efficiently.
+- [ ] POS search responds promptly.
+- [ ] Barcode lookup is efficient.
+- [ ] Cart operations remain responsive.
+- [ ] Large tables use server-side pagination.
+- [ ] Database queries are indexed.
+- [ ] No unnecessary repeated API calls.
+- [ ] No major frontend rendering bottlenecks.
+- [ ] Reports use efficient queries.
+- [ ] Large exports are handled safely.
+
+Establish measurable performance targets and validate them under realistic test loads.
+
+Suggested initial targets:
+
+- Dashboard API p95 response time: 500 ms or less for normal operational data volumes.
+- POS product lookup p95 response time: 300 ms or less under the agreed local test conditions.
+- Ordinary API reads: 500 ms or less at p95 under agreed test conditions.
+- Avoid unnecessary blocking of the POS workflow.
+
+Do not treat these targets as proof of performance without measurements. Record hardware, dataset size, concurrency and test conditions.
+
+## Reliability
+
+- [ ] Reliable database connections.
+- [ ] Safe transaction processing.
+- [ ] Graceful error handling.
+- [ ] Recovery after application restart.
+- [ ] Duplicate request protection.
+- [ ] Reliable stock reconciliation.
+- [ ] Safe external payment handling.
+- [ ] Controlled background jobs.
+- [ ] No silent data corruption.
+
+## Usability
+
+- [ ] Clear navigation.
+- [ ] Consistent design.
+- [ ] Accessible forms.
+- [ ] Helpful error messages.
+- [ ] Clear success messages.
+- [ ] Search and filtering.
+- [ ] Keyboard-friendly workflows.
+- [ ] POS optimised for cashier operations.
+- [ ] Responsive layouts.
+- [ ] Appropriate touch targets.
+
+## Accessibility
+
+- [ ] Semantic HTML.
+- [ ] Keyboard navigation.
+- [ ] Visible focus indicators.
+- [ ] Accessible form labels.
+- [ ] Accessible validation messages.
+- [ ] Sufficient colour contrast.
+- [ ] Accessible dialogs.
+- [ ] Screen-reader-friendly status updates.
+- [ ] Meaningful icon labels.
+- [ ] No colour-only communication of important statuses.
+
+Target WCAG 2.2 AA as the accessibility benchmark.
+
+## Maintainability
+
+- [ ] Modular architecture.
+- [ ] Reusable components.
+- [ ] Clear naming.
+- [ ] TypeScript typing.
+- [ ] No unnecessary duplication.
+- [ ] Centralised configuration.
+- [ ] Consistent error handling.
+- [ ] Useful code comments.
+- [ ] Dependency documentation.
+- [ ] Automated tests.
+- [ ] Updated technical documentation.
+
+## Scalability
+
+- [ ] Efficient query architecture.
+- [ ] Proper indexing.
+- [ ] Server-side pagination.
+- [ ] Efficient API design.
+- [ ] Multi-branch architecture considered.
+- [ ] Database growth considered.
+- [ ] Concurrent user operations tested.
+- [ ] Storage growth planned.
+- [ ] Reporting workloads controlled.
+
+## Compatibility
+
+- [ ] Current supported Chrome.
+- [ ] Current supported Edge.
+- [ ] Supported Firefox.
+- [ ] Desktop responsiveness.
+- [ ] Tablet responsiveness.
+- [ ] Mobile usability.
+- [ ] Supported local printer configuration.
+- [ ] MySQL/MariaDB compatibility.
+- [ ] PostgreSQL migration readiness.
+
+---
+
+# 23. BACKUP, DISASTER RECOVERY AND BUSINESS CONTINUITY
+
+- [ ] Automated database backup procedure.
+- [ ] Configurable backup frequency.
+- [ ] Backup retention policy.
+- [ ] Secure backup storage.
+- [ ] Backup integrity validation.
+- [ ] Restore procedure.
+- [ ] Restore test.
+- [ ] Recovery documentation.
+- [ ] Application configuration backup.
+- [ ] Private document backup.
+- [ ] Migration recovery procedure.
+- [ ] Protection against accidental data deletion.
+
+Define and document appropriate Recovery Point Objective (RPO) and Recovery Time Objective (RTO) with the pharmacy's operational requirements.
+
+A backup is not considered verified until restoration has been successfully tested.
+
+---
+
+# 24. FILES, DOCUMENTS AND ATTACHMENTS
+
+Where document uploads are supported:
+
+- [ ] Prescription uploads.
+- [ ] Purchase invoice attachments.
+- [ ] Supplier documents.
+- [ ] Supporting return documents.
+- [ ] Controlled file types.
+- [ ] File size limits.
+- [ ] Secure storage.
+- [ ] Private download routes.
+- [ ] File validation.
+- [ ] Safe file naming.
+- [ ] Malware scanning where available.
+- [ ] Access control.
+- [ ] Backup and recovery.
+
+Do not expose sensitive attachments through unrestricted public URLs.
+
+---
+
+# 25. LOGGING, MONITORING AND AUDITABILITY
+
+- [ ] Application error logs.
+- [ ] API request logs.
+- [ ] Authentication events.
+- [ ] Failed login events.
+- [ ] Permission changes.
+- [ ] Financial operation logs.
+- [ ] Inventory adjustment logs.
+- [ ] Refund logs.
+- [ ] Prescription approval logs where applicable.
+- [ ] System configuration logs.
+- [ ] Database health monitoring.
+- [ ] Application health endpoint.
+- [ ] Operational alerts.
+- [ ] Log retention policy.
+- [ ] Log redaction.
+
+Audit records must identify:
+
+- User.
+- Action.
+- Relevant record.
+- Date and time.
+- Relevant before-and-after values where appropriate.
+- Reason for sensitive changes.
+- Related transaction or reference.
+
+Sensitive audit history must not be modifiable by ordinary application users.
+
+---
+
+# 26. COMPLETE TESTING AND QUALITY ASSURANCE
+
+Testing must be executed against the actual application.
+
+### Unit tests
+
+- [ ] Financial calculations.
+- [ ] Currency rounding.
+- [ ] Tax calculations.
+- [ ] Discount calculations.
+- [ ] Unit conversions.
+- [ ] FEFO selection.
+- [ ] Stock calculations.
+- [ ] Payment allocation.
+- [ ] Permission checks.
+- [ ] Validation.
+
+### Integration tests
+
+- [ ] Frontend/API integration.
+- [ ] Authentication/database integration.
+- [ ] Medicine/inventory integration.
+- [ ] Purchase/inventory integration.
+- [ ] POS/payment integration.
+- [ ] POS/inventory integration.
+- [ ] Returns/inventory integration.
+- [ ] Reports/financial records integration.
+- [ ] Notification integration.
+
+### End-to-end tests
+
+- [ ] Login.
+- [ ] Dashboard.
+- [ ] Medicine registration.
+- [ ] Stock receiving.
+- [ ] Batch registration.
+- [ ] POS product search.
+- [ ] POS cash sale.
+- [ ] POS payment workflow.
+- [ ] Receipt printing.
+- [ ] Stock deduction.
+- [ ] Return.
+- [ ] Refund.
+- [ ] Purchase order.
+- [ ] Goods received.
+- [ ] Supplier management.
+- [ ] Customer management.
+- [ ] User permissions.
+- [ ] Reports.
+- [ ] Logout.
+
+### Failure tests
+
+- [ ] Failed database connection.
+- [ ] Database interruption during transaction.
+- [ ] API timeout.
+- [ ] Duplicate submission.
+- [ ] Duplicate payment callback.
+- [ ] Insufficient stock.
+- [ ] Expired medicine.
+- [ ] Concurrent sale attempts.
+- [ ] Invalid discount.
+- [ ] Invalid user permissions.
+- [ ] Invalid prescription approval.
+- [ ] Receipt printing failure.
+- [ ] Failed backup restoration test.
+
+Use controlled test records.
+
+Never use real customer or patient information for automated testing.
+
+---
+
+# 27. POSTGRESQL MIGRATION VERIFICATION
+
+Prepare a repeatable migration procedure.
+
+- [ ] PostgreSQL environment variables.
+- [ ] PostgreSQL driver.
+- [ ] Knex PostgreSQL configuration.
+- [ ] PostgreSQL migrations.
+- [ ] Primary key compatibility.
+- [ ] Foreign key compatibility.
+- [ ] Numeric and decimal compatibility.
+- [ ] Timestamp compatibility.
+- [ ] Boolean compatibility.
+- [ ] JSON compatibility.
+- [ ] Index compatibility.
+- [ ] Transaction compatibility.
+- [ ] Unique constraint compatibility.
+- [ ] SQL compatibility.
+- [ ] Data export procedure.
+- [ ] Data import procedure.
+- [ ] Referential integrity validation.
+- [ ] Critical workflow testing.
+
+Do not claim PostgreSQL readiness simply because a PostgreSQL connection string exists.
+
+Where PostgreSQL is unavailable, explicitly distinguish implemented configuration from verified migration behaviour.
+
+---
+
+# 28. PRODUCTION DEPLOYMENT CHECKLIST
+
+### Environment
+
+- [ ] Separate development and production configuration.
+- [ ] Production environment variables.
+- [ ] Protected secrets.
+- [ ] Correct database connection.
+- [ ] Secure application URLs.
+- [ ] HTTPS.
+- [ ] Production CORS policy.
+- [ ] Secure cookies.
+- [ ] Production build.
+- [ ] Database migrations.
+
+### Infrastructure
+
+- [ ] Supported Node.js runtime.
+- [ ] Reliable process management.
+- [ ] Web server configuration.
+- [ ] Database server configuration.
+- [ ] Private storage.
+- [ ] Logging.
+- [ ] Monitoring.
+- [ ] Automated backup.
+- [ ] Recovery process.
+- [ ] Health checks.
+
+### Final release
+
+- [ ] No development credentials.
+- [ ] No exposed private files.
+- [ ] No test patient records.
+- [ ] No unresolved critical vulnerabilities.
+- [ ] No unresolved critical application errors.
+- [ ] No failing critical business workflows.
+- [ ] All migrations reviewed.
+- [ ] Backup completed.
+- [ ] Restore process tested.
+- [ ] Production deployment tested.
+- [ ] Rollback plan documented.
+
+Remember: XAMPP is the initial local environment. It should not automatically be treated as a suitable publicly exposed production hosting configuration.
+
+---
+
+# 29. MANDATORY FINAL ACCEPTANCE TESTS
+
+Before approving the project, execute the following complete business scenarios.
+
+### Scenario A — Normal pharmacy sale
+
+- [ ] Register a test medicine.
+- [ ] Receive stock.
+- [ ] Register its batch and expiry.
+- [ ] Open POS.
+- [ ] Search for the medicine.
+- [ ] Add medicine to cart.
+- [ ] Enter quantity.
+- [ ] Calculate totals.
+- [ ] Complete cash payment.
+- [ ] Generate receipt.
+- [ ] Verify sale record.
+- [ ] Verify payment record.
+- [ ] Verify inventory deduction.
+- [ ] Verify batch deduction.
+- [ ] Verify stock movement.
+- [ ] Verify dashboard figures.
+- [ ] Verify sales report.
+
+### Scenario B — Failed sale
+
+- [ ] Start a sale.
+- [ ] Simulate failed payment.
+- [ ] Verify payment failure state.
+- [ ] Verify no incorrectly completed sale.
+- [ ] Verify no unintended stock deduction.
+- [ ] Verify no inconsistent financial records.
+
+### Scenario C — Duplicate request
+
+- [ ] Submit a POS transaction.
+- [ ] Repeat the same request with its original idempotency key.
+- [ ] Verify only one sale exists.
+- [ ] Verify stock was deducted only once.
+- [ ] Verify payment records are not duplicated.
+
+### Scenario D — Concurrent stock sales
+
+- [ ] Create a controlled stock quantity.
+- [ ] Initiate two sales for the same remaining stock.
+- [ ] Attempt both sales concurrently.
+- [ ] Verify stock cannot be oversold.
+- [ ] Verify transaction outcomes are consistent.
+
+### Scenario E — Expiry control
+
+- [ ] Create multiple batches with different expiry dates.
+- [ ] Verify FEFO allocation.
+- [ ] Attempt sale of expired stock.
+- [ ] Verify sale is blocked.
+- [ ] Verify quarantined stock is blocked.
+
+### Scenario F — Returns and refunds
+
+- [ ] Locate an original sale.
+- [ ] Process a valid return.
+- [ ] Verify returned quantities.
+- [ ] Verify refund amount.
+- [ ] Verify authorised approval.
+- [ ] Verify stock treatment.
+- [ ] Verify original sale is preserved.
+- [ ] Verify audit history.
+
+### Scenario G — Purchasing
+
+- [ ] Create purchase order.
+- [ ] Approve purchase order where required.
+- [ ] Receive goods.
+- [ ] Register batches.
+- [ ] Verify quantities.
+- [ ] Verify purchase costs.
+- [ ] Verify inventory updates.
+- [ ] Verify purchase records.
+- [ ] Verify supplier balances.
+
+### Scenario H — User permissions
+
+- [ ] Login as cashier.
+- [ ] Attempt an authorised sale.
+- [ ] Attempt an administrator-only operation.
+- [ ] Verify unauthorised access is blocked.
+- [ ] Login as pharmacist.
+- [ ] Verify permitted prescription workflow.
+- [ ] Login as administrator.
+- [ ] Verify authorised management functions.
+
+### Scenario I — Database recovery
+
+- [ ] Create a database backup.
+- [ ] Verify backup integrity.
+- [ ] Restore into a controlled test environment.
+- [ ] Verify records.
+- [ ] Verify relationships.
+- [ ] Verify application connectivity.
+
+### Scenario J — PostgreSQL compatibility
+
+- [ ] Execute PostgreSQL migrations where available.
+- [ ] Import controlled test data.
+- [ ] Verify relationships.
+- [ ] Execute critical sales workflows.
+- [ ] Verify inventory.
+- [ ] Verify financial calculations.
+- [ ] Document unexecuted tests.
+
+---
+
+# 30. FINAL IMPLEMENTATION STATUS AND EVIDENCE
+
+Create a master FEATURE_TRACEABILITY_MATRIX.md.
+
+For each requirement, maintain:
+
+| Field | Required information |
+|---|---|
+| Feature ID | Unique reference |
+| Module | Relevant application module |
+| Requirement | Expected functionality |
+| Implementation | Files or components changed |
+| API | Relevant endpoint |
+| Database | Tables and relationships |
+| Test | Executed test reference |
+| Result | Pass, Fail, Blocked or Not Tested |
+| Evidence | Test output or reproducible evidence |
+| Remaining issue | Outstanding limitation |
+| Approval | Acceptance status |
+
+Use only these completion statuses:
+
+- NOT STARTED
+- IN PROGRESS
+- IMPLEMENTED — NOT TESTED
+- TESTED — FAILED
+- TESTED — PASSED
+- BLOCKED
+- APPROVED
+
+A feature must not be labelled COMPLETE merely because its page or button exists.
+
+A feature is approved only when its backend, database behaviour, permissions, error handling and relevant workflow have been verified.
+
+---
+
+# 31. FINAL PRODUCTION RELEASE GATES
+
+The project must pass all mandatory gates.
+
+## Gate 1 — Functionality
+
+- [ ] Every agreed critical feature is implemented.
+- [ ] Every required module is integrated.
+- [ ] No critical buttons or workflows are broken.
+- [ ] No critical feature is merely a placeholder.
+
+## Gate 2 — Data integrity
+
+- [ ] Financial records reconcile.
+- [ ] Stock records reconcile.
+- [ ] Batch quantities reconcile.
+- [ ] Payments reconcile.
+- [ ] Returns are auditable.
+- [ ] Transactions are protected against duplication.
+
+## Gate 3 — Security
+
+- [ ] Authentication is verified.
+- [ ] Permissions are verified.
+- [ ] Critical vulnerabilities are addressed.
+- [ ] Sensitive data is protected.
+- [ ] Production secrets are secured.
+
+## Gate 4 — Quality
+
+- [ ] Critical unit tests pass.
+- [ ] Critical integration tests pass.
+- [ ] Critical end-to-end tests pass.
+- [ ] No unresolved critical runtime errors.
+- [ ] No unresolved high-risk defects without an approved mitigation.
+
+## Gate 5 — Performance and usability
+
+- [ ] Performance targets have been measured.
+- [ ] POS remains responsive.
+- [ ] Main screens operate reliably.
+- [ ] Supported screen sizes have been verified.
+- [ ] Accessibility review is completed.
+
+## Gate 6 — Operations
+
+- [ ] Installation instructions work.
+- [ ] Startup instructions work.
+- [ ] Backup works.
+- [ ] Restore has been tested.
+- [ ] Troubleshooting documentation exists.
+- [ ] Production configuration is reviewed.
+
+## Gate 7 — Migration readiness
+
+- [ ] MySQL/MariaDB implementation works.
+- [ ] PostgreSQL compatibility has been assessed.
+- [ ] Migration process is documented.
+- [ ] Actual PostgreSQL verification is completed or explicitly identified as outstanding.
+
+**Do not release the system as production-ready if any critical release gate fails.**
+
+---
+
+# 32. REQUIRED FINAL PROJECT DELIVERABLES
+
+Provide the following deliverables.
+
+1. Complete updated source code.
+2. Complete React frontend.
+3. Complete Express backend.
+4. Database migrations.
+5. Database seed scripts for non-sensitive reference data.
+6. Environment example files.
+7. Working API documentation.
+8. Automated tests.
+9. End-to-end test suite.
+10. Project audit report.
+11. Feature traceability matrix.
+12. System architecture documentation.
+13. Functional implementation report.
+14. POS verification report.
+15. Inventory and data integrity report.
+16. Security report.
+17. Performance report.
+18. PostgreSQL migration readiness report.
+19. XAMPP installation guide.
+20. Database backup and restore documentation.
+21. Production deployment guide.
+22. Troubleshooting guide.
+23. Final test evidence.
+24. Outstanding issue register.
+
+---
+
+# 33. FINAL EXECUTION DIRECTIVE
+
+Start by inspecting the entire actual project.
+
+Preserve existing working features.
+
+Work through all outstanding modules and requirements systematically.
+
+Do not stop after designing the UI.
+
+Do not stop after creating API endpoints.
+
+Do not stop after connecting the database.
+
+Do not stop after making the application start successfully.
+
+Complete the actual workflows across frontend, backend and database.
+
+Prioritise:
+
+1. Accurate financial transactions.
+2. Correct inventory and medicine batch records.
+3. Reliable POS operations.
+4. Secure authentication and permissions.
+5. Complete pharmacy business operations.
+6. Accurate reports.
+7. Professional user experience.
+8. Maintainable architecture.
+9. Reliable backups and recovery.
+10. PostgreSQL migration readiness.
+
+At every stage, execute appropriate tests and update the traceability matrix.
+
+Where a requirement cannot be fully completed because of unavailable external services, hardware, regulatory decisions or infrastructure, implement the available components and clearly document the dependency.
+
+Do not fabricate test results.
+
+Do not mark unverified features as complete.
+
+Do not conceal defects.
+
+Do not claim that software is guaranteed to be 100% error-free.
+
+The objective is zero known critical defects, no unresolved unacceptable high-risk defects, verified critical business workflows, documented limitations and repeatable release testing.
+
+**FINAL EXPECTATION: DELIVER A COMPLETE, PROFESSIONAL, FULLY INTEGRATED, SECURE, TESTED AND OPERATIONALLY VERIFIED PHARMACY MANAGEMENT SYSTEM — NOT JUST A FUNCTIONAL-LOOKING INTERFACE.**
+
+The system must be suitable for controlled real-world pharmacy operations only after all relevant operational, regulatory, security and production acceptance requirements have been satisfied.
+
+Begin implementation now and continue until all available requirements have been completed, tested, documented and reported.

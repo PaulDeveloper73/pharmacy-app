@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1d3b" />
+    <meta
+      name="description"
+      content="PharmaPro — Smart Pharmacy Management demo application"
+    />
+    <title>PharmaPro | Smart Pharmacy Management</title>
+    <script>
+      tailwind = { config: { theme: { extend: { colors: { navy: '#10264A', blue: '#2563EB', emerald: '#10B981', purple: '#7C3AED' } } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="app-shell" class="app-shell">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand-row">
+          <div class="brand-mark" aria-hidden="true"><span></span><i></i></div>
+          <div class="brand-copy">
+            <strong>PharmaPro</strong><small>Smart Pharmacy Management</small>
+          </div>
+          <button
+            id="sidebar-collapse"
+            class="sidebar-collapse"
+            type="button"
+            title="Collapse sidebar"
+            aria-label="Collapse sidebar"
+          ></button>
+        </div>
+        <nav
+          id="sidebar-nav"
+          class="sidebar-nav"
+          aria-label="Main navigation"
+        ></nav>
+        <div class="sidebar-bottom">
+          <div class="security-card">
+            <div class="security-shield">✓</div>
+            <strong>Your data is secure</strong>
+            <span>Powered by modern<br />technology</span>
+          </div>
+          <div class="version-label">v1.0.0 · Demo</div>
+        </div>
+      </aside>
+
+      <div id="mobile-overlay" class="mobile-overlay"></div>
+      <section class="workspace">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button
+              id="mobile-menu"
+              class="mobile-menu icon-button"
+              type="button"
+              aria-label="Open navigation"
+            ></button>
+            <div class="global-search-wrap">
+              <span class="search-icon" id="global-search-icon"></span>
+              <input
+                id="global-search"
+                type="search"
+                placeholder="Search medicines, customers, or transactions..."
+                autocomplete="off"
+                aria-label="Global search"
+              />
+              <div
+                id="global-search-results"
+                class="global-search-results hidden"
+              ></div>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <div class="dropdown-wrap">
+              <button
+                id="notification-trigger"
+                class="icon-button notification-trigger"
+                type="button"
+                aria-label="Notifications"
+              >
+                <span id="bell-icon"></span><b id="notification-count">3</b>
+              </button>
+              <div
+                id="notification-menu"
+                class="dropdown-menu notification-menu hidden"
+              ></div>
+            </div>
+            <div class="dropdown-wrap profile-wrap">
+              <button
+                id="profile-trigger"
+                class="profile-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span id="user-avatar" class="avatar">JM</span>
+                <span class="profile-text"
+                  ><strong id="top-user-name">Dr. James Mwangi</strong
+                  ><small id="top-user-role">Administrator</small></span
+                >
+                <span id="chevron-icon"></span>
+              </button>
+              <div id="profile-menu" class="dropdown-menu profile-menu hidden">
+                <div class="dropdown-user">
+                  <strong id="menu-user-name">Dr. James Mwangi</strong
+                  ><span id="menu-user-email">james@pharmapro.demo</span>
+                </div>
+                <button type="button" data-profile-action="profile">
+                  My Profile
+                </button>
+                <button type="button" data-profile-action="settings">
+                  Preferences & Settings
+                </button>
+                <button type="button" data-profile-action="help">
+                  Help & Support
+                </button>
+                <div class="dropdown-divider"></div>
+                <button
+                  type="button"
+                  class="danger-text"
+                  data-profile-action="logout"
+                >
+                  Sign out
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main-content" class="main-content" tabindex="-1"></main>
+      </section>
+    </div>
+
+    <div id="modal-root"></div>
+    <div
+      id="toast-root"
+      class="toast-root"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

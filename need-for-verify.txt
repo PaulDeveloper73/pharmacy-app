@@ -1,0 +1,15 @@
+Analyse the attached file and extract all the info and execute them systematically professionally: Never accept a feature based on appearance alone. For every module, require proof of the complete workflow.Example: What counts as a completed POS feature?
+
+    Frontend interface works and validates inputs.
+
+    Express API receives and validates the request.
+
+    Database records are created correctly.
+
+    Inventory and payment records reconcile.
+
+    Permissions and security are enforced.
+
+    Failure and duplicate scenarios pass.
+
+    Automated tests and evidence are recorded.
