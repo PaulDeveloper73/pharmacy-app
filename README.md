@@ -10,7 +10,7 @@ PharmaPro is a responsive pharmacy management frontend demonstration built to sh
 
 ## Product preview
 
-[**View School App– Live Application**](https://pauldeveloper73.github.io/school-app//)
+[**View PharmaPro App– Live Application**](https://pauldeveloper73.github.io/pharmacy-app/)
 
 ## ![PharmaPro dashboard preview](assets/PharmaPro%20Pharmacy%20Dashboard.png)
 
